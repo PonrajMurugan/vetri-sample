@@ -18,7 +18,7 @@ const Credentials = () => {
                 <h6>VTS <span style={{color:"orange"}}>Certificate</span> </h6>
             </div>
 
-            <div className="students-section">
+            {/* <div className="students-section">
                 <h5><span style={{color:"orange"}}>Top Ranked</span> Students are from here</h5>
                 <div className="students-gallery">
                     <div className="student-card">
@@ -38,7 +38,7 @@ const Credentials = () => {
                         <div className="hover-content">Data Analyst</div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

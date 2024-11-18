@@ -33,6 +33,10 @@ import Placements from './Components/FED/placements';
 import VisPlacement from './Components/FED/VISplacement';
 import Python from './Components/Trainings/pythonFullstack';
 import Pyfs from './Components/Trainings/PYFS';
+import JavaFullStack from './Components/Trainings/JFS';
+import MobileAppDevel from './Components/Trainings/MobileAppDevel';
+import DataAnalyticsNew from './Components/Trainings/DataAnalyticsNew';
+import DataScienceNew from './Components/Trainings/DataScienceNew';
 
 function App() {
   return (
@@ -77,11 +81,23 @@ function App() {
           <Route path="/VISplace" element={<VisPlacement />} /> */}
 
           {/* <Route path='/training-details/3' element={<Python/>}/> */}
+
+
           <Route path='/training-details/3' element={<Pyfs/>}/>
+          <Route path='/training-details/4' element={<JavaFullStack/>}/>
+          <Route path='/training-details/5' element={<MobileAppDevel/>} />
+          <Route path='/training-details/9' element={<DataAnalyticsNew/>} />
+          <Route path='/training-details/8' element={<DataScienceNew/>} />
+
+
+          <Route path="/internship" element={<Internship />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/placement" element={<Placements />} />
+          <Route path="/VISplace" element={<VisPlacement />} /> 
 
         </Routes>
 
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );

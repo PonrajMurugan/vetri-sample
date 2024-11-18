@@ -3,6 +3,7 @@ import './PYFS.css';
 import { FaPython, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase, FaGithub, FaUserTie, FaLaptopCode, FaServer, FaGlobeAmericas, FaTools, FaQuestionCircle } from 'react-icons/fa';
 import { SiDjango, SiMysql, SiFlask, SiBootstrap } from 'react-icons/si';
 import Footer from '../Footer/footer';
+import Credentials from '../credentials/credentials';
 
 const Pyfs = () => {
     const skills = [
@@ -30,7 +31,7 @@ const Pyfs = () => {
 
     return (
         <div>
-        <div className="course-container">
+        <div data-aos="flip-left" className="course-container">
             <header className="course-header">
                 <h1 className='course-after'>Python Full Stack Development</h1>
                 <p>
@@ -63,7 +64,7 @@ const Pyfs = () => {
                 </section>
 
                 <h2 className="module-heading">Modules & Tools</h2>
-                <section className="course-modules">
+                <section data-aos="fade-up" className="course-modules">
                     <div className="module">
                         <h3><FaPython /> Python Programming</h3>
                         <p>Learn Python, the most versatile and beginner-friendly programming language, to write efficient and maintainable code.</p>
@@ -102,7 +103,7 @@ const Pyfs = () => {
                     </div>
                 </section>
 
-                <section class="career-opportunities">
+                <section data-aos="fade-up" class="career-opportunities">
     <h2 class="section-title">Career Opportunities</h2>
     <div class="career-container">
         <div class="career-item">
@@ -145,7 +146,7 @@ const Pyfs = () => {
     {/* <a href="#" class="career-cta">Explore More Opportunities</a> */}
 </section>
 
-                <section className="course-benefits">
+                <section data-aos="fade-up" className="course-benefits">
                     <h2>Why Choose This Course?</h2>
                     <ul>
                         <li>Comprehensive curriculum covering frontend and backend development.</li>
@@ -156,7 +157,7 @@ const Pyfs = () => {
                     </ul>
                 </section>
 
-                <section className="course-faq">
+                <section data-aos="fade-up" className="course-faq">
     <h2>Frequently Asked Questions</h2>
     <div className="faq-item">
         <div className="faq-icon">
@@ -180,7 +181,7 @@ const Pyfs = () => {
 
 
 <div class="course-info-wrapper">
-    <section class="course-details">
+    <section data-aos="fade-up" class="course-details">
         <h2 class="section-title">Course Details</h2>
         <div class="details-wrapper">
             <div class="details-item">
@@ -206,7 +207,7 @@ const Pyfs = () => {
         </div>
     </section>
 
-    <section class="course-benefits">
+    <section data-aos="fade-up" class="course-benefits">
         <h2 class="section-title">Course Benefits</h2>
         <div class="benefits-wrapper">
             <div class="benefit-item">
@@ -237,7 +238,8 @@ const Pyfs = () => {
 
             </div>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
+        <Credentials/>
         </div>
     );
 };

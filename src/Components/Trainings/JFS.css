@@ -1,0 +1,148 @@
+.jfs-container {
+    max-width: 1200px;
+    margin: 150px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4e73df, #1e3d8b);
+    color: white;
+    border-radius: 15px;
+}
+
+.jfs-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.jfs-title {
+    font-size: 3em;
+    color: #ffcc00;
+}
+
+.jfs-description {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+.jfs-section {
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.jfs-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.jfs-section h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #ffcc00;
+}
+
+.jfs-section h1 svg {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.jfs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.jfs-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.jfs-list li:hover {
+    color: #ffcc00;
+}
+
+.jfs-skills {
+    background: #38b6ff;
+}
+
+.jfs-tools {
+    background: #ff8c00;
+}
+
+.jfs-career {
+    background: #28a745;
+}
+
+.jfs-benefits {
+    background: #f4c542;
+}
+
+.jfs-faq {
+    background: #6f42c1;
+}
+
+.jfs-details {
+    background: #17a2b8;
+}
+
+.jfs-course-benefits {
+    background: #e83e8c;
+}
+
+.jfs-profile {
+    background: #ffc107;
+}
+
+.jfs-global {
+    background: #20c997;
+}
+
+.jfs-analytics {
+    background: #343a40;
+}
+
+@media (max-width: 768px) {
+    .jfs-header h1 {
+        font-size: 2.2em;
+    }
+
+    .jfs-description {
+        font-size: 1em;
+    }
+
+    .jfs-section h1 {
+        font-size: 1.8em;
+    }
+
+    .jfs-list li {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .jfs-container {
+        padding: 10px;
+    }
+
+    .jfs-header h1 {
+        font-size: 1.8em;
+    }
+
+    .jfs-description {
+        font-size: 0.9em;
+    }
+
+    .jfs-section h1 {
+        font-size: 1.5em;
+    }
+
+    .jfs-list li {
+        font-size: 1em;
+    }
+}
