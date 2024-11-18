@@ -64,7 +64,7 @@ const Navbar = () => {
           </li>
 
             <li className="nav-item" ref={megaMenuRef}> 
-              <span className="nav-link dropdown-toggle" onClick={toggleMegaMenu}>
+              <span style={{cursor:"pointer"}} className="nav-link dropdown-toggle" onClick={toggleMegaMenu}>
                 OUR TRAININGS
               </span>
               <div className={`mega-menu ${isMegaMenuOpen ? 'open' : ''}`}> 
