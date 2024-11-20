@@ -5,6 +5,9 @@ import {
     FaStar, FaArrowRight, FaUserAlt, FaGlobe, FaRegChartBar, FaCodeBranch, 
     FaDatabase, FaServer, FaDesktop, FaClipboardCheck, FaCogs 
 } from 'react-icons/fa';
+
+import { FaJava, FaHtml5, FaCss3Alt, FaReact,  FaGithub } from 'react-icons/fa';
+import { SiSpring, SiMysql, SiDjango, SiFlask, SiBootstrap } from 'react-icons/si';
 import Credentials from '../credentials/credentials';
 
 const JavaFullStack = () => {
@@ -14,37 +17,95 @@ const JavaFullStack = () => {
     const syllabus = [
         {
             title: "Core Java Programming",
-            content: "Understand the basics of Java, including OOP principles, multithreading, exception handling, and collections."
+            content: [
+                "Understand the basics of Java, including OOP principles.",
+                "Learn about multithreading and exception handling.",
+                "Explore Java collections like List, Set, and Map.",
+                "Work with file I/O and serialization in Java.",
+                "Learn about Java memory management and garbage collection."
+            ],
+            icon: <FaJava className="syllabus-icon" />
         },
         {
             title: "Front-End Development",
-            content: "Learn HTML5, CSS3, and JavaScript to design responsive web interfaces. Use Angular or React for building dynamic applications."
+            content: [
+                "Learn HTML5, CSS3, and JavaScript to design responsive web interfaces.",
+                "Understand DOM manipulation and event handling in JavaScript.",
+                "Use Angular or React for building dynamic applications.",
+                "Learn about responsive design using Flexbox and Grid.",
+                "Master CSS frameworks like Bootstrap or Materialize."
+            ],
+            icon: <FaHtml5 className="syllabus-icon" />
         },
         {
             title: "Spring Framework",
-            content: "Master Spring Boot to create enterprise-level backend applications with RESTful APIs and microservices architecture."
+            content: [
+                "Master Spring Boot to create enterprise-level backend applications.",
+                "Learn how to develop RESTful APIs using Spring MVC.",
+                "Understand microservices architecture with Spring Cloud.",
+                "Implement security features in Spring using Spring Security.",
+                "Work with Spring Data JPA and Hibernate ORM."
+            ],
+            icon: <SiSpring className="syllabus-icon" />
         },
         {
             title: "Database Management",
-            content: "Work with relational databases like MySQL or PostgreSQL and learn advanced SQL queries for managing and retrieving data."
+            content: [
+                "Work with relational databases like MySQL and PostgreSQL.",
+                "Learn advanced SQL queries for managing and retrieving data.",
+                "Understand database normalization and optimization techniques.",
+                "Implement database indexing for improved query performance.",
+                "Work with stored procedures and triggers in databases."
+            ],
+            icon: <SiMysql className="syllabus-icon" />
         },
         {
             title: "Version Control and Collaboration",
-            content: "Use Git and GitHub for efficient version control and collaborative project management."
+            content: [
+                "Learn Git basics: commits, branches, merges, and rebasing.",
+                "Understand how to collaborate on projects using GitHub.",
+                "Learn about version control strategies for team collaboration.",
+                "Work with Git workflows like Git Flow and feature branching.",
+                "Understand pull requests and code reviews for team collaboration."
+            ],
+            icon: <FaGithub className="syllabus-icon" />
         },
         {
             title: "Hibernate & JPA",
-            content: "Integrate Hibernate ORM for database operations and understand the Java Persistence API."
+            content: [
+                "Integrate Hibernate ORM for database operations.",
+                "Understand the Java Persistence API (JPA) and how it works.",
+                "Learn how to map Java objects to database tables.",
+                "Work with entity relationships like One-to-One, One-to-Many.",
+                "Optimize database queries using Hibernate Query Language (HQL)."
+            ],
+            icon: <FaDatabase className="syllabus-icon" />
         },
         {
             title: "Deployment and Cloud Basics",
-            content: "Learn to deploy your applications on cloud platforms like AWS, Azure, or Google Cloud, and understand containerization with Docker."
+            content: [
+                "Learn how to deploy applications on AWS, Azure, or Google Cloud.",
+                "Understand containerization using Docker and Kubernetes.",
+                "Deploy microservices-based applications using Kubernetes.",
+                "Understand serverless computing and its benefits.",
+                "Learn how to monitor and scale cloud applications."
+            ],
+            icon: <SiFlask className="syllabus-icon" />
         },
         {
             title: "Capstone Projects",
-            content: "Develop end-to-end projects like e-commerce platforms, job portals, or social networking applications using Java Full Stack."
+            content: [
+                "Work on real-world projects like e-commerce platforms.",
+                "Develop a job portal using full-stack technologies.",
+                "Create a social networking application with Java Full Stack.",
+                "Build a RESTful API for an online marketplace.",
+                "Learn how to integrate third-party APIs into your projects."
+            ],
+            icon: <SiBootstrap className="syllabus-icon" />
         }
     ];
+
+
 
     const toggleContent = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
@@ -69,7 +130,7 @@ const JavaFullStack = () => {
 
 
 
-        <div data-aos="flip-right" className="jfs-container">
+        <div data-aos="fade-up" className="jfs-container">
 
             
             <div className="jfs-header">
@@ -89,20 +150,59 @@ const JavaFullStack = () => {
                 </ul>
             </div>
 
-            <div  data-aos="fade-up" id='syllabus' className="syllabus-container">
-            <h2 className="section-heading">Syllabus</h2>
-            <ul className="syllabus-list">
-                {syllabus.map((item, index) => (
-                    <li key={index} className="syllabus-item">
-                        <div className="syllabus-header" onClick={() => toggleContent(index)}>
-                            <span>{item.title}</span>
-                            <span className="toggle-icon">{activeIndex === index ? "-" : "+"}</span>
-                        </div>
-                        {activeIndex === index && <p className="syllabus-content">{item.content}</p>}
-                    </li>
-                ))}
-            </ul>
-        </div>
+            <div data-aos="fade-up" id='syllabus' className="syllabus-container">
+    <h2 className="section-heading">Syllabus</h2>
+
+    <ul className="syllabus-list">
+        {syllabus.map((item, index) => (
+            <li key={index} className="syllabus-item">
+                <div className="syllabus-header" onClick={() => toggleContent(index)}>
+                    <span className={`syllabus-icon ${item.icon}`}>{item.icon}</span>
+                    <span style={{color:"navy" , fontSize:"1.3rem"}} className="syllabus-title">{item.title}</span>
+                    <span className="toggle-icon">
+                        <i className={`fa-solid ${activeIndex === index ? 'fa-arrow-down' : 'fa-arrow-right'}`}></i>
+                    </span>
+                </div>
+                {activeIndex === index && (
+                    <ul style={{cursor:"pointer"}} className="syllabus-content">
+                        {item.content.map((point, i) => (
+                            <li
+                                key={i}
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    marginBottom: "5px",
+                                    color: "#444", 
+                                }}
+                            >
+                                &nbsp;
+                                <i
+                                    className="fa-solid fa-circle-dot"
+                                    style={{
+                                        color: activeIndex === index ? "#007BFF" : "#888", 
+                                        transition: "color 0.3s ease",
+                                    }}
+                                ></i>
+                                &nbsp; {point}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </li>
+        ))}
+    </ul>
+
+    <div className="data-science-download-section">
+        <h3 className="data-science-download-heading">Download Syllabus </h3>
+        <a href="/path/to/your/pdf-file.pdf" download className="data-science-download-button">
+            <i className="fa-solid fa-download"></i> Download 
+        </a>
+    </div>
+
+
+</div>
+
+
 
 
             <div id='modules' data-aos="fade-up" className="jfs-section jfs-tools">

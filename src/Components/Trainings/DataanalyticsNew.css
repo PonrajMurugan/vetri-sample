@@ -1,4 +1,79 @@
-
+/* Container and general styles */
+.Data-analy-syllabus-container {
+    background-color: #f0f4f8;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Data-analy-section-heading {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* List styles */
+  .Data-analy-syllabus-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Data-analy-syllabus-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Header and toggle icon */
+  .Data-analy-syllabus-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  
+  .Data-analy-toggle-icon {
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .Data-analy-syllabus-header:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Content styles */
+  .Data-analy-syllabus-content {
+    padding-left: 20px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    margin-top: 10px;
+  }
+  
+  .Data-analy-syllabus-point {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .Data-analy-syllabus-point::before {
+    content: "• ";
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .Data-analy-syllabus-item > .Data-analy-syllabus-content {
+    padding-top: 10px;
+  }
+  
 .DaN-container {
     max-width: 1200px;
     margin: 120px auto;

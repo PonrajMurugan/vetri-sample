@@ -37,6 +37,7 @@ import JavaFullStack from './Components/Trainings/JFS';
 import MobileAppDevel from './Components/Trainings/MobileAppDevel';
 import DataAnalyticsNew from './Components/Trainings/DataAnalyticsNew';
 import DataScienceNew from './Components/Trainings/DataScienceNew';
+import UiuxDesign from './Components/Trainings/uiuxDesign';
 
 function App() {
   return (
@@ -88,6 +89,8 @@ function App() {
           <Route path='/training-details/5' element={<MobileAppDevel/>} />
           <Route path='/training-details/9' element={<DataAnalyticsNew/>} />
           <Route path='/training-details/8' element={<DataScienceNew/>} />
+
+          <Route path="/training-details/11" element={<UiuxDesign />} />
 
 
           <Route path="/internship" element={<Internship />} />

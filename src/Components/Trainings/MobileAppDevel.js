@@ -16,37 +16,70 @@ const MobileAppDevel = () => {
     const syllabus = [
         {
             title: "Introduction to Mobile App Development",
-            content: "Learn the fundamentals of mobile app development, including the differences between native, hybrid, and cross-platform applications."
+            content: [
+                "Learn the fundamentals of mobile app development.",
+                "Understand the differences between native, hybrid, and cross-platform applications.",
+                "Explore the mobile development ecosystem and tools."
+            ]
         },
         {
             title: "UI/UX Design Principles",
-            content: "Understand the basics of designing intuitive and engaging user interfaces using tools like Figma or Adobe XD."
+            content: [
+                "Understand the basics of designing intuitive and engaging user interfaces.",
+                "Learn to use tools like Figma or Adobe XD for prototyping and design.",
+                "Explore color theory, typography, and user-centered design."
+            ]
         },
         {
             title: "React Native",
-            content: "Build cross-platform apps using React Native with reusable components and fast development cycles."
+            content: [
+                "Build cross-platform apps using React Native.",
+                "Learn about reusable components and fast development cycles.",
+                "Understand navigation, styling, and device APIs in React Native."
+            ]
         },
         {
             title: "Flutter Framework",
-            content: "Learn Flutter to create beautiful, high-performance applications for both Android and iOS from a single codebase."
+            content: [
+                "Learn Flutter to create beautiful, high-performance applications.",
+                "Understand the differences between Flutter and other frameworks like React Native.",
+                "Create mobile apps for both Android and iOS from a single codebase."
+            ]
         },
         {
             title: "Backend Integration",
-            content: "Connect your mobile apps to backend services like Firebase, REST APIs, or GraphQL for real-time and seamless data interaction."
+            content: [
+                "Connect mobile apps to backend services like Firebase.",
+                "Learn how to use REST APIs or GraphQL for real-time data interaction.",
+                "Understand user authentication and data storage in mobile apps."
+            ]
         },
         {
             title: "State Management",
-            content: "Master state management techniques using Context API, Redux, or Provider for scalable app development."
+            content: [
+                "Master state management techniques using Context API, Redux, or Provider.",
+                "Learn about managing app state in large-scale applications.",
+                "Explore data flow and performance optimization in React Native and Flutter."
+            ]
         },
         {
             title: "Publishing and Deployment",
-            content: "Learn to publish apps on Google Play Store and Apple App Store, including app submission guidelines."
+            content: [
+                "Learn how to publish apps on the Google Play Store and Apple App Store.",
+                "Understand app submission guidelines for both platforms.",
+                "Get familiar with app versioning, beta testing, and updates."
+            ]
         },
         {
             title: "Capstone Projects",
-            content: "Develop fully functional mobile apps, such as a food delivery app or a fitness tracker, showcasing your skills."
+            content: [
+                "Develop fully functional mobile apps, such as a food delivery app or a fitness tracker.",
+                "Showcase your skills with real-world project development.",
+                "Focus on the full app lifecycle, from idea conception to deployment."
+            ]
         }
     ];
+    
 
     const toggleContent = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
@@ -60,7 +93,7 @@ const MobileAppDevel = () => {
             <nav className="fixed-navbar" style={{marginTop:"100px"}}>
                 <ul>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#syllabus">syllabus</a></li>
+                    <li><a href="#syllabus">Syllabus</a></li>
                     <li><a href="#modules">Modules</a></li>
                     <li><a href="#career">Career</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -69,7 +102,7 @@ const MobileAppDevel = () => {
             </nav>
             
 
-        <div data-aos="flip-left" className="mobile-container">
+        <div data-aos="fade-up" className="mobile-container">
             <div className="mobile-header">
                 <h1 style={{marginTop:"58px"}}  className="mobile-header-title"><FaMobileAlt /> Mobile App Development</h1>
                 <p className="mobile-header-description">Build cutting-edge applications with a complete skill set in Mobile App Development technologies! Perfect for beginners and experienced developers looking to enhance their skill set.</p>
@@ -91,20 +124,57 @@ const MobileAppDevel = () => {
             </div>
 
 
-            <div id='syllabus' className="mb-syllabus-container">
-            <h2 className="mb-section-heading">Syllabus</h2>
-            <ul className="mb-syllabus-list">
-                {syllabus.map((item, index) => (
-                    <li key={index} className="mb-syllabus-item">
-                        <div className="mb-syllabus-header" onClick={() => toggleContent(index)}>
-                            <span>{item.title}</span>
-                            <span className="mb-toggle-icon">{activeIndex === index ? "-" : "+"}</span>
-                        </div>
-                        {activeIndex === index && <p className="mb-syllabus-content">{item.content}</p>}
-                    </li>
-                ))}
-            </ul>
-        </div>
+            <div data-aos="fade-up" id='syllabus' className="syllabus-container">
+    <h2 className="section-heading">Syllabus</h2>
+
+    <ul className="syllabus-list">
+        {syllabus.map((item, index) => (
+            <li key={index} className="syllabus-item">
+                <div className="syllabus-header" onClick={() => toggleContent(index)}>
+                    <span className={`syllabus-icon ${item.icon}`}>{item.icon}</span>
+                    <span style={{color:"navy" , fontSize:"1.3rem"}} className="syllabus-title">{item.title}</span>
+                    <span className="toggle-icon">
+                        <i className={`fa-solid ${activeIndex === index ? 'fa-arrow-down' : 'fa-arrow-right'}`}></i>
+                    </span>
+                </div>
+                {activeIndex === index && (
+                    <ul style={{cursor:"pointer"}} className="syllabus-content">
+                        {item.content.map((point, i) => (
+                            <li
+                                key={i}
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    marginBottom: "5px",
+                                    color: "#444", 
+                                }}
+                            >
+                                &nbsp;
+                                <i
+                                    className="fa-solid fa-circle-dot"
+                                    style={{
+                                        color: activeIndex === index ? "#007BFF" : "#888", 
+                                        transition: "color 0.3s ease",
+                                    }}
+                                ></i>
+                                &nbsp; {point}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </li>
+        ))}
+    </ul>
+
+    <div className="data-science-download-section">
+        <h3 className="data-science-download-heading">Download Syllabus </h3>
+        <a href="/path/to/your/pdf-file.pdf" download className="data-science-download-button">
+            <i className="fa-solid fa-download"></i> Download 
+        </a>
+    </div>
+
+
+</div>
 
 
             <div id='modules' data-aos="fade-up" className="mobile-section mobile-tools">

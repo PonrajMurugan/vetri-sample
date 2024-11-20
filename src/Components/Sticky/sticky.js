@@ -12,7 +12,7 @@ const StickyIcons = () => {
     return (
         <div className="sticky-icons">
             <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/8681857753"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon whatsapp-icon"

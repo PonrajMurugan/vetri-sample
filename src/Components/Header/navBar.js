@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './navBar.css';
 import logo from '../Vetri Technology Solutions_files/vetrilogo.8f5df87fe97371e066e4.jpg';
+import logos from '../Screenshot 2024-11-19 141418.png';
+
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -45,9 +47,10 @@ const Navbar = () => {
   return (
     <div className='fixed-top'>
       <div className="navbar">
+        
         <div className="containers"> 
           <Link to="/" className="navbar-logo" onClick={handleLogoClick}>
-            <img src={logo} alt="Logo" />
+            <img src={logos} alt="Logo" />
           </Link>
 
           <div className="menu-icon" onClick={toggleMenu}>
@@ -58,18 +61,17 @@ const Navbar = () => {
 
           <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a href="#raj" className="nav-link">
-              VTS PROCESS
+            <a href="#raj" className="nav-link"> <i class="fa-solid fa-earth-americas"></i>&nbsp;VTS PROCESS
             </a>
           </li>
 
             <li className="nav-item" ref={megaMenuRef}> 
               <span style={{cursor:"pointer"}} className="nav-link dropdown-toggle" onClick={toggleMegaMenu}>
-                OUR TRAININGS
+              <i class="fa-solid fa-user-graduate"></i>&nbsp; OUR TRAININGS
               </span>
               <div className={`mega-menu ${isMegaMenuOpen ? 'open' : ''}`}> 
                 <div className="mega-menu-column">
-                  <h3>CODING</h3>
+                  <h3 style={{color:"aqua"}}>CODING</h3>
                   <div>
                     <ol>
                       {/* <li><Link to="/training-details/2" className="dropdown-item" onClick={handleLogoClick}>Front End Developer</Link></li>
@@ -77,29 +79,37 @@ const Navbar = () => {
                       <li><Link to="/training-details/13" className="dropdown-item"onClick={handleLogoClick}>Back End Developer(Node)</Link></li>
                       <li><Link to="/training-details/14" className="dropdown-item" onClick={handleLogoClick}>Back End Developer(Java)</Link></li>
                       <li><Link to="/training-details/1" className="dropdown-item" onClick={handleLogoClick}>MERN Stack Developer</Link></li> */}
-                      <li><Link to="/training-details/3" className="dropdown-item" onClick={handleLogoClick}>Python Full Stack</Link></li>
-                      <li><Link to="/training-details/4" className="dropdown-item" onClick={handleLogoClick}>Java Full Stack</Link></li>
-                      <li><Link to="/training-details/5" className="dropdown-item" onClick={handleLogoClick}>Mobile App Development</Link></li>
-                      <li><Link to="/training-details/9" className="dropdown-item" onClick={handleLogoClick}>Data Analytics</Link></li>
-                      <li><Link to="/training-details/8" className="dropdown-item" onClick={handleLogoClick}>Data Science</Link></li>
+                      <li><Link to="/training-details/3" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Python Full Stack</Link></li>
+                      <li><Link to="/training-details/4" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Java Full Stack</Link></li>
+                      <li><Link to="/training-details/5" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Mobile App Development</Link></li>
+                      <li><Link to="/training-details/9" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Data Analytics</Link></li>
+                      <li><Link to="/training-details/8" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Data Science</Link></li>
                     </ol>
                   </div>
+                  
+                  {/* <h3 style={{color:"aqua"}}>NON-CODING</h3> */}
 
-                  {/* <h3>NON-CODING</h3>
+                  <h3 style={{color:"aqua"}}>NON-CODING</h3>
                   <div>
                     <ol>
-                      <li><Link to="/training-details/11" className="dropdown-item" onClick={handleLogoClick}>UI / UX Design</Link></li>
-                      <li><Link to="/training-details/7" className="dropdown-item" onClick={handleLogoClick}>Digital Marketing</Link></li>
-                      <li><Link to="/training-details/10" className="dropdown-item" onClick={handleLogoClick}>Software Testing</Link></li>
-                      <li><Link to="/training-details/6" className="dropdown-item" onClick={handleLogoClick}>AWS</Link></li>
-                      <li><Link to="/training-details/15" className="dropdown-item" onClick={handleLogoClick}>Business Analytics</Link></li>
+                      {/* <li><Link to="/training-details/11" className="dropdown-item" onClick={handleLogoClick}>UI / UX Design</Link></li> */}
+                      {/* <li><Link to="/training-details/7" className="dropdown-item" onClick={handleLogoClick}>Digital Marketing</Link></li> */}
+                      {/* <li><Link to="/training-details/10" className="dropdown-item" onClick={handleLogoClick}>Software Testing</Link></li> */}
+                      {/* <li><Link to="/training-details/6" className="dropdown-item" onClick={handleLogoClick}>AWS</Link></li> */}
+                      {/* <li><Link to="/training-details/15" className="dropdown-item" onClick={handleLogoClick}>Business Analytics</Link></li> */}
+
+
+                      <li><Link to="/training-details/11" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; UI / UX Design</Link></li>
+
+
+
                     </ol>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </li>
             <li className="nav-item">
-              <Link to="/careers" className="nav-link">CAREERS</Link>
+              <Link to="/careers" className="nav-link"> <i class="fa-regular fa-eye"></i>&nbsp;CAREERS</Link>
             </li>
           </ul>
         </div>

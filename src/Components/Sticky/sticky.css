@@ -35,19 +35,25 @@
 }
 
 .whatsapp-icon {
-    background-color:orange;
-    color: navy;
-    border: none;
+    background-color: #0F52BA; 
+    color: #E0FFFF; 
+    border: 2px solid #1E90FF; 
+    border-radius: 58px; 
+    box-shadow: 0 0 8px #1E90FF; 
 }
 
 .contact-icon {
-    background-color:orange;
-    color: navy;
-    border: none;
+    background-color: #1C1CF0; 
+    color: #E0FFFF; 
+    border: 2px solid #4169E1; 
+    border-radius: 58px; 
+    box-shadow: 0 0 8px #4169E1; 
 }
 
 .up-arrow-icon {
-    background-color:orange;
-    color: navy;
-    border: none;
+    background-color: #0000FF; 
+    color: #FFFFFF; 
+    border: 2px solid #5B84F1; 
+    border-radius: 58%; 
+    box-shadow: 0 0 10px #5B84F1; 
 }

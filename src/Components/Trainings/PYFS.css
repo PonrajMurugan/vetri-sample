@@ -44,6 +44,7 @@
 
 .course-header {
     text-align: center;
+    /* justify-content: center; */
     
     /* margin-bottom: 50px; */
 }
@@ -119,7 +120,7 @@
 }
 
 .skill-icon {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
     color: var(--primary-color);
 }
@@ -131,22 +132,37 @@
     font-family: "Unna", serif;
     font-weight: 400;
 }
+
+.lll{
+    font-family: "Unna", serif;
+    font-weight: 400;
+    
+
+}
+
 .skill p:hover{
+    /* color: aqua; */
     color: white;
 }
 
 .skill:hover {
     /* transform: translateY(-10px); */
     box-shadow: 0 12px 30px var(--shadow-color);
-    background: linear-gradient(145deg, var(--primary-color), var(--accent-color));
+    /* background: linear-gradient(145deg, var(--primary-color), var(--accent-color)); */
+    background: linear-gradient(135deg, #0F52BA, #1E90FF);
+    cursor: pointer;
     color: var(--hover-text-color);
     color: white;
+    /* color: aqua; */
 
 }
 
 .skill:hover .skill-icon {
     /* color: var(--hover-text-color); */
     color: white;
+    /* color: aqua; */
+    cursor: pointer;
+    
 }
 
 
@@ -196,10 +212,19 @@
 .career-info h3 {
     font-size: 1.6rem;
     font-weight: 600;
-    color: navy;
+    color: rgb(61, 61, 211);
     margin-bottom: 15px;
 
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+
     
+}
+.ppp{
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .career-info p {
@@ -262,6 +287,11 @@
     color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 15px;
+
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+
 
     
 }
@@ -407,13 +437,15 @@ color:navy;
 
 .course-benefits ul li {
     margin: 15px 0;
-    color: var(--muted-color);
+    /* color: var(--muted-color); */
+    color: #000000;
 }
 
 .course-benefits ul li::before {
     content: '✔';
     margin-right: 10px;
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
+    color: rgb(0, 0, 254);
 }
 
 
@@ -600,7 +632,6 @@ color:navy;
 
 
 
-/* Fixed Navbar */
 .fixed-navbar {
     position: fixed;
     top: 0;
@@ -641,19 +672,13 @@ color:navy;
     background-color: #333;
 }
 
-/* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Add margin to sections to prevent content from being hidden behind the fixed navbar */
-section {
-    padding-top: 70px;  /* Adjust based on navbar height */
-}
 
-/* Styling for the rest of the page */
 .course-container {
-    margin-top: 60px; /* Avoid content being overlapped by navbar */
+    margin-top: 60px;
 }
 
 .module-heading {
@@ -721,7 +746,7 @@ section {
 }
 
 .course-container {
-    margin-top: 60px; /* To prevent overlap with the navbar */
+    margin-top: 60px; 
 }
 
 
@@ -736,10 +761,16 @@ section {
 
 .section-heading {
     font-size: 1.8rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     margin-bottom: 20px;
     text-align: center;
     color: #333;
+
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+
+
 }
 
 .syllabus-list {
@@ -771,8 +802,93 @@ section {
 
 .syllabus-content {
     margin-top: 10px;
-    font-size: 1rem;
-    color: #444;
+    font-size: 1.3rem;
+    color: black;
     padding-left: 15px;
     line-height: 1.6;
+
+    font-family: "Unna", serif;
+    font-weight: 400;
+
+    
+}
+
+
+.icon-python {
+    color: #3776AB; /* Python Blue */
+}
+
+.icon-oop {
+    color: #6A0DAD; /* Purple for OOP */
+}
+
+.icon-dsa {
+    color: #E67E22; /* Orange for Data Structures */
+}
+
+.icon-html {
+    color: #E34F26; /* HTML5 Orange */
+}
+
+/* Add styles for other icons */
+.syllabus-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.icon-python {
+    color: #3776AB; /* Python Blue */
+}
+
+.icon-oop {
+    color: #6A0DAD; /* Purple for OOP */
+}
+
+.icon-dsa {
+    color: #E67E22; /* Orange for Data Structures */
+}
+
+.icon-html {
+    color: #E34F26; /* HTML5 Red-Orange */
+}
+
+.icon-js {
+    color: #F7DF1E; /* JavaScript Yellow */
+}
+
+.icon-react {
+    color: #61DAFB; /* React Cyan */
+}
+
+.icon-flask {
+    color: #000000; /* Flask Black */
+}
+
+.icon-django {
+    color: #092E20; /* Django Green */
+}
+
+.icon-mysql {
+    color: #00758F; /* MySQL Blue */
+}
+
+.icon-restapi {
+    color: #FF5733; /* REST API Red-Orange */
+}
+
+.icon-git {
+    color: #F05032; /* GitHub Orange */
+}
+
+.icon-cicd {
+    color: #2D9CDB; /* CI/CD Blue */
+}
+
+.icon-capstone {
+    color: #1ABC9C; /* Capstone Green */
+}
+
+.syllabus-icon {
+    font-size: 1.8rem; /* Adjust size for better visuals */
+    margin-right: 10px; /* Add spacing to the right */
 }
