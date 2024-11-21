@@ -110,30 +110,36 @@ const DataScienceNew = () => {
 
         <div data-aos="fade-up" className="dsn-container">
             <section className="dsn-intro">
-                <h1 className="dsn-title"><FaChartBar /> Data Science</h1>
-                <p className="dsn-description">Data science is the study of data to extract meaningful insights and knowledge. Data scientists use scientific methods, algorithms, and programming to collect, analyze, and interpret large amounts of data.</p>
+                <h1 className="dsn-title dsn-pon"><FaChartBar /> Data Science</h1>
+                <p className="dsn-description dsn-raj">Data science is the study of data to extract meaningful insights and knowledge. Data scientists use scientific methods, algorithms, and programming to collect, analyze, and interpret large amounts of data.</p>
+           
+                <div data-aos="fade-down">
+                        <img className='pyfs-img'  style={{width:"450px",height:"40vh",borderRadius:"50px" , marginTop:"30px"}} src='https://user-images.githubusercontent.com/74038190/213760705-0d5bf320-4f43-4352-b74b-0889ae726bf7.gif' alt='logo' />
+
+                    </div>
+
             </section>
 
             <section id='skills' data-aos="fade-up" className="dsn-skills">
-                <h2 className="dsn-section-title"><FaCogs /> Skills You Will Learn</h2>
+                <h2 className="dsn-section-title dsn-pon"><FaCogs /> Skills You Will Learn</h2>
                 <div className="dsn-skills-list">
-    <div data-aos="fade-down" className="dsn-skill-item"><FaDatabase /> Data Cleaning & Preprocessing</div>
-    <div data-aos="fade-down" className="dsn-skill-item"><FaChartLine /> Data Visualization</div>
-    <div data-aos="fade-down" className="dsn-skill-item"><FaLaptopCode /> Machine Learning Algorithms</div>
-    <div data-aos="fade-down" className="dsn-skill-item"><FaLightbulb /> Problem Solving</div>
-    <div data-aos="fade-down" className="dsn-skill-item"><FaTools /> Statistical Analysis</div>
-    <div data-aos="fade-down" className="dsn-skill-item"><FaPython /> Python Programming</div>
+    <div data-aos="fade-down" className="dsn-skill-item dsn-raj"><FaDatabase /> Data Cleaning & Preprocessing</div>
+    <div data-aos="fade-down" className="dsn-skill-item dsn-raj"><FaChartLine /> Data Visualization</div>
+    <div data-aos="fade-down" className="dsn-skill-item dsn-raj"><FaLaptopCode /> Machine Learning Algorithms</div>
+    <div data-aos="fade-down" className="dsn-skill-item dsn-raj"><FaLightbulb /> Problem Solving</div>
+    <div data-aos="fade-down" className="dsn-skill-item dsn-raj"><FaTools /> Statistical Analysis</div>
+    <div data-aos="fade-down" className="dsn-skill-item dsn-raj"><FaPython /> Python Programming</div>
 </div>
 
             </section>
 
-            <div id="syllabus" className="data-science-syllabus-container">
-    <h2 className="data-science-section-heading">Syllabus</h2>
-    <ul className="data-science-syllabus-list">
+            <div data-aos="fade-up" id="syllabus" className="data-science-syllabus-container">
+    <h2 data-aos="fade-up" className="data-science-section-heading dsn-pon">Syllabus</h2>
+    <ul data-aos="fade-up" className="data-science-syllabus-list">
         {syllabus.map((item, index) => (
             <li key={index} className="data-science-syllabus-item">
                 <div className="data-science-syllabus-header" onClick={() => toggleContent(index)}>
-                    <span className="data-science-title">{item.title}</span>
+                    <span data-aos="fade-up" className="data-science-title  dsn-raj">{item.title}</span>
                     <span className="data-science-toggle-icon">
                         {activeIndex === index ? (
                             <i className="fa-solid fa-arrow-down"></i>  
@@ -145,7 +151,7 @@ const DataScienceNew = () => {
                 {activeIndex === index && (
                     <ul className="data-science-syllabus-content">
                         {item.content.map((point, i) => (
-                            <li key={i} className="data-science-syllabus-point">
+                            <li key={i} className="data-science-syllabus-point dsn-raj">
                                 <i className="fa-solid fa-circle-dot"></i> {point}
                             </li>
                         ))}
@@ -168,8 +174,8 @@ const DataScienceNew = () => {
 
 
             <section id='modules' data-aos="fade-up" className="dsn-modules">
-                <h2 className="dsn-section-title"><FaLaptopCode /> Modules And Tools</h2>
-                <div className="dsn-modules-list">
+                <h2 data-aos="fade-up" className="dsn-section-title dsn-pon"><FaLaptopCode /> Modules And Tools</h2>
+                <div data-aos="fade-up" className="dsn-modules-list dsn-raj">
     <div data-aos="fade-down" className="dsn-module-item"><FaChartLine /> Python for Data Science</div>
     <div data-aos="fade-down" className="dsn-module-item"><FaDatabase /> SQL & NoSQL Databases</div>
     <div data-aos="fade-down" className="dsn-module-item"><FaBriefcase /> Machine Learning Tools</div>
@@ -181,13 +187,13 @@ const DataScienceNew = () => {
             </section>
 
             <section id='career' data-aos="fade-up" className="dsn-career">
-                <h2 className="dsn-section-title"><FaSchool /> Career Opportunities</h2>
-                <p className="dsn-career-description">As a data science graduate, you will be ready to pursue roles like Data Scientist, Data Analyst, Business Intelligence Analyst, and Machine Learning Engineer in various industries.</p>
+                <h2 data-aos="fade-up" className="dsn-section-title dsn-pon"><FaSchool /> Career Opportunities</h2>
+                <p data-aos="fade-up" className="dsn-career-description dsn-raj">As a data science graduate, you will be ready to pursue roles like Data Scientist, Data Analyst, Business Intelligence Analyst, and Machine Learning Engineer in various industries.</p>
             </section>
 
             <section data-aos="fade-up" className="dsn-why-choose">
-                <h2 className="dsn-section-title"><FaLightbulb /> Why Choose This Course?</h2>
-                <ul className="dsn-benefits-list">
+                <h2 data-aos="fade-up" className="dsn-section-title dsn-pon"><FaLightbulb /> Why Choose This Course?</h2>
+                <ul data-aos="fade-up" className="dsn-benefits-list dsn-raj">
                     <li><FaBriefcase /> Hands-on projects & case studies</li>
                     <li><FaChartBar /> Exposure to real-world datasets</li>
                     <li><FaSchool /> Industry-recognized certification</li>
@@ -196,18 +202,18 @@ const DataScienceNew = () => {
             </section>
 
             <section id='faq' data-aos="fade-up" className="dsn-faq">
-                <h2 className="dsn-section-title"><FaQuestionCircle /> Frequently Asked Questions</h2>
-                <p className="dsn-faq-description">Explore answers to questions related to course duration, prerequisites, and more.</p>
+                <h2 data-aos="fade-up" className="dsn-section-title dsn-pon"><FaQuestionCircle /> Frequently Asked Questions</h2>
+                <p data-aos="fade-up" className="dsn-faq-description dsn-raj">Explore answers to questions related to course duration, prerequisites, and more.</p>
             </section>
 
             <section data-aos="fade-up" className="dsn-course-details">
-                <h2 className="dsn-section-title"><FaClipboardList /> Course Details</h2>
-                <p className="dsn-details-description">The course is 12 weeks long, covering essential data science concepts, tools, and techniques with hands-on projects.</p>
+                <h2 data-aos="fade-up" className="dsn-section-title dsn-pon"><FaClipboardList /> Course Details</h2>
+                <p data-aos="fade-up" className="dsn-details-description dsn-raj">The course is 12 weeks long, covering essential data science concepts, tools, and techniques with hands-on projects.</p>
             </section>
 
             <section data-aos="fade-up" className="dsn-course-benefits">
-                <h2 className="dsn-section-title"><FaChartBar /> Course Benefits</h2>
-                <ul className="dsn-benefits-list">
+                <h2 data-aos="fade-up" className="dsn-section-title dsn-pon"><FaChartBar /> Course Benefits</h2>
+                <ul data-aos="fade-up" className="dsn-benefits-list dsn-raj">
                     <li><FaSchool /> Learn from industry experts</li>
                     <li><FaTools /> Gain proficiency in tools like Python, R, SQL</li>
                     <li><FaLightbulb /> Build strong problem-solving skills</li>

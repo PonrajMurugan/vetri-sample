@@ -134,13 +134,21 @@ const JavaFullStack = () => {
 
             
             <div className="jfs-header">
-                <h1 className="jfs-title">Java Full Stack Development</h1>
-                <p className="jfs-description">Build cutting-edge applications with a complete skill set in frontend and backend technologies! Perfect for beginners and experienced developers looking to enhance their skill set.</p>
+                <h1 style={{fontSize:"2.3rem"}} className="jfs-title jfs-pon">Java Full Stack Development</h1>
+                <p className="jfs-description jfs-raj">Build cutting-edge applications with a complete skill set in frontend and backend technologies! Perfect for beginners and experienced developers looking to enhance their skill set.</p>
+           
+           
+                <div data-aos="fade-down">
+                        <img className='pyfs-img'  style={{width:"450px",height:"40vh",borderRadius:"50px" , marginTop:"30px"}} src='https://user-images.githubusercontent.com/74038190/212897707-026174ef-f09d-4d41-a4bb-c7266f5420b0.gif' alt='logo' />
+
+                    </div>
+
             </div>
 
+
             <div id='skills' className="jfs-section jfs-skills">
-                <h1><FaLaptopCode /> Skills You Will Learn</h1>
-                <ul className="jfs-list">
+                <h1 style={{fontSize:"2rem"}} className='jfs-pon'><FaLaptopCode /> Skills You Will Learn</h1>
+                <ul className="jfs-list jfs-raj">
                     <li><FaCodeBranch /> Java Programming</li>
                     <li><FaCogs /> Spring Framework</li>
                     <li><FaServer /> RESTful APIs</li>
@@ -151,14 +159,14 @@ const JavaFullStack = () => {
             </div>
 
             <div data-aos="fade-up" id='syllabus' className="syllabus-container">
-    <h2 className="section-heading">Syllabus</h2>
+    <h2 className="section-heading jfs-pon">Syllabus</h2>
 
     <ul className="syllabus-list">
         {syllabus.map((item, index) => (
             <li key={index} className="syllabus-item">
-                <div className="syllabus-header" onClick={() => toggleContent(index)}>
-                    <span className={`syllabus-icon ${item.icon}`}>{item.icon}</span>
-                    <span style={{color:"navy" , fontSize:"1.3rem"}} className="syllabus-title">{item.title}</span>
+                <div data-aos="fade-up" className="syllabus-header" onClick={() => toggleContent(index)}>
+                    <span data-aos="fade-up" className={`syllabus-icon ${item.icon}`}>{item.icon}</span>
+                    <span data-aos="fade-up" style={{color:"navy" , fontSize:"1.3rem"}} className="syllabus-title jfs-pon">{item.title}</span>
                     <span className="toggle-icon">
                         <i className={`fa-solid ${activeIndex === index ? 'fa-arrow-down' : 'fa-arrow-right'}`}></i>
                     </span>
@@ -206,18 +214,18 @@ const JavaFullStack = () => {
 
 
             <div id='modules' data-aos="fade-up" className="jfs-section jfs-tools">
-                <h1><FaTools /> Modules And Tools</h1>
-                <p><FaCogs /> Hands-on experience with tools like Eclipse, IntelliJ, Git, Docker, and Jenkins to streamline the development process.</p>
+                <h1 style={{fontSize:"1.8rem"}} className='jfs-pon'><FaTools /> Modules And Tools</h1>
+                <p className='jfs-raj'><FaCogs /> Hands-on experience with tools like Eclipse, IntelliJ, Git, Docker, and Jenkins to streamline the development process.</p>
             </div>
 
             <div id='career' data-aos="fade-up" className="jfs-section jfs-career">
-                <h1><FaGraduationCap /> Career Opportunities</h1>
-                <p><FaRegChartBar /> Graduates can explore roles such as Full Stack Developer, Backend Developer, Frontend Engineer, and Software Consultant. High demand in tech firms ensures great career growth.</p>
+                <h1  style={{fontSize:"1.8rem"}} className='jfs-pon'><FaGraduationCap /> Career Opportunities</h1>
+                <p className='jfs-raj'><FaRegChartBar /> Graduates can explore roles such as Full Stack Developer, Backend Developer, Frontend Engineer, and Software Consultant. High demand in tech firms ensures great career growth.</p>
             </div>
 
             <div data-aos="fade-up" className="jfs-section jfs-benefits">
-                <h1 style={{color:"navy"}}><FaStar /> Why Choose This Course</h1>
-                <ul className="jfs-list">
+                <h1   className='jfs-pon' style={{color:"navy",fontSize:"1.8rem"}}><FaStar /> Why Choose This Training</h1>
+                <ul className="jfs-list jfs-raj">
                     <li><FaClipboardCheck /> Comprehensive curriculum covering both frontend and backend</li>
                     <li><FaStar /> Project-based learning to build a strong portfolio</li>
                     <li><FaCogs /> Industry-relevant tools and technologies</li>
@@ -225,33 +233,33 @@ const JavaFullStack = () => {
             </div>
 
             <div id='faq' data-aos="fade-up" className="jfs-section jfs-faq">
-                <h1><FaQuestionCircle /> Frequently Asked Questions</h1>
-                <p><FaQuestionCircle /> Get answers to common questions regarding course duration, certification, and more to make an informed decision.</p>
+                <h1 className='jfs-pon' style={{fontSize:"1.8rem"}}><FaQuestionCircle /> Frequently Asked Questions</h1>
+                <p className='jfs-raj'><FaQuestionCircle /> Get answers to common questions regarding course duration, certification, and more to make an informed decision.</p>
             </div>
 
             <div data-aos="fade-up" className="jfs-section jfs-details">
-                <h1><FaBook /> Course Details</h1>
-                <p><FaClipboardCheck /> This course spans over 12 weeks, including theory, practical projects, and assessments.</p>
+                <h1 className='jfs-pon' style={{fontSize:"1.8rem"}}><FaBook /> Training Details</h1>
+                <p  className='jfs-raj'><FaClipboardCheck /> This course spans over 12 weeks, including theory, practical projects, and assessments.</p>
             </div>
 
             <div data-aos="fade-up" className="jfs-section jfs-course-benefits">
-                <h1><FaArrowRight /> Course Benefits</h1>
-                <p><FaArrowRight /> Upon completion, you will have the skills to build full-fledged web applications, understand server-client architecture, and be ready for the job market.</p>
+                <h1 className='jfs-pon' style={{fontSize:"1.8rem"}}><FaArrowRight /> Training Benefits</h1>
+                <p  className='jfs-raj'><FaArrowRight /> Upon completion, you will have the skills to build full-fledged web applications, understand server-client architecture, and be ready for the job market.</p>
             </div>
 
             <div data-aos="fade-up" className="jfs-section jfs-profile">
-                <h1 style={{color:"navy"}}><FaUserAlt /> Instructor Profile</h1>
-                <p><FaUserAlt /> Learn from industry experts with years of experience in Java full stack development.</p>
+                <h1 className='jfs-pon' style={{color:"navy", fontSize:"1.8rem"}}><FaUserAlt /> Instructor Profile</h1>
+                <p className='jfs-raj'><FaUserAlt /> Learn from industry experts with years of experience in Java full stack development.</p>
             </div>
 
             <div data-aos="fade-up" className="jfs-section jfs-global">
-                <h1><FaGlobe /> Global Reach</h1>
-                <p><FaGlobe /> Join a global network of developers and expand your professional opportunities worldwide.</p>
+                <h1 className='jfs-pon' style={{fontSize:"1.8rem"}}><FaGlobe /> Global Reach</h1>
+                <p className='jfs-raj'><FaGlobe /> Join a global network of developers and expand your professional opportunities worldwide.</p>
             </div>
 
             <div data-aos="fade-up" className="jfs-section jfs-analytics">
-                <h1><FaRegChartBar /> Performance Analytics</h1>
-                <p><FaRegChartBar /> Track your progress and understand your strengths and areas for improvement through detailed analytics.</p>
+                <h1 className='jfs-pon' style={{fontSize:"1.8rem"}}><FaRegChartBar /> Performance Analytics</h1>
+                <p className='jfs-raj'><FaRegChartBar /> Track your progress and understand your strengths and areas for improvement through detailed analytics.</p>
             </div>
             <Credentials/>
         </div>

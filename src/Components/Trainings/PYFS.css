@@ -12,7 +12,7 @@
 .course-container {
     width: 80%;
     margin: 0 auto;
-    margin-top: 100px;
+    
     padding: 30px;  
 
 }
@@ -44,9 +44,7 @@
 
 .course-header {
     text-align: center;
-    /* justify-content: center; */
-    
-    /* margin-bottom: 50px; */
+
 }
 
 .course-header h1 {
@@ -136,6 +134,7 @@
 .lll{
     font-family: "Unna", serif;
     font-weight: 400;
+    font-size: 1.4rem;
     
 
 }
@@ -201,6 +200,7 @@
 .career-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .career-icon {
@@ -501,6 +501,7 @@ color:navy;
 .details-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .details-item i {
@@ -583,6 +584,7 @@ color:navy;
 .benefit-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .benefit-item i {
@@ -592,7 +594,7 @@ color:navy;
 }
 
 .benefit-item:hover i {
-    color: #e74c3c;
+    color: navy;
 }
 
 .benefit-item strong {
@@ -815,80 +817,374 @@ html {
 
 
 .icon-python {
-    color: #3776AB; /* Python Blue */
+    color: #3776AB; 
 }
 
 .icon-oop {
-    color: #6A0DAD; /* Purple for OOP */
+    color: #6A0DAD; 
 }
 
 .icon-dsa {
-    color: #E67E22; /* Orange for Data Structures */
+    color: #E67E22; 
 }
 
 .icon-html {
-    color: #E34F26; /* HTML5 Orange */
+    color: #E34F26; 
 }
 
-/* Add styles for other icons */
 .syllabus-icon {
     font-size: 1.5rem;
     margin-right: 10px;
 }
 
 .icon-python {
-    color: #3776AB; /* Python Blue */
+    color: #3776AB; 
 }
 
 .icon-oop {
-    color: #6A0DAD; /* Purple for OOP */
+    color: #6A0DAD; 
 }
 
 .icon-dsa {
-    color: #E67E22; /* Orange for Data Structures */
+    color: #E67E22; 
 }
 
 .icon-html {
-    color: #E34F26; /* HTML5 Red-Orange */
+    color: #E34F26; 
 }
 
 .icon-js {
-    color: #F7DF1E; /* JavaScript Yellow */
+    color: #F7DF1E; 
 }
 
 .icon-react {
-    color: #61DAFB; /* React Cyan */
+    color: #61DAFB; 
 }
 
 .icon-flask {
-    color: #000000; /* Flask Black */
+    color: #000000; 
 }
 
 .icon-django {
-    color: #092E20; /* Django Green */
+    color: #092E20; 
 }
 
 .icon-mysql {
-    color: #00758F; /* MySQL Blue */
+    color: #00758F; 
 }
 
 .icon-restapi {
-    color: #FF5733; /* REST API Red-Orange */
+    color: #FF5733; 
 }
 
 .icon-git {
-    color: #F05032; /* GitHub Orange */
+    color: #F05032; 
 }
 
 .icon-cicd {
-    color: #2D9CDB; /* CI/CD Blue */
+    color: #2D9CDB; 
 }
 
 .icon-capstone {
-    color: #1ABC9C; /* Capstone Green */
+    color: #1ABC9C;
 }
 
 .syllabus-icon {
-    font-size: 1.8rem; /* Adjust size for better visuals */
-    margin-right: 10px; /* Add spacing to the right */
+    font-size: 1.8rem; 
+    margin-right: 10px; 
 }
+
+
+
+.reduced-syllabus-container {
+    background-color: #1a1a1a; 
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 30px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reduced-syllabus-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.reduced-syllabus-heading {
+    text-align: center;
+    font-size: 2rem; 
+    font-weight: 700;
+    color: #00bcd4; 
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.8), 0 0 25px rgba(0, 188, 212, 0.5);
+
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    
+}
+
+.reduced-syllabus-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reduced-syllabus-item {
+    background-color: #2b2b2b; 
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reduced-syllabus-item:hover {
+    background-color: #333333;
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.5);
+}
+
+.reduced-syllabus-header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: linear-gradient(135deg, #00bcd4, #673ab7); 
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.reduced-syllabus-header:hover {
+    background: linear-gradient(135deg, #673ab7, #00bcd4);
+}
+
+.reduced-syllabus-icon {
+    background-color: #00bcd4;
+    color: #212121;
+    font-size: 1.4rem; 
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reduced-syllabus-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.9);
+}
+
+.reduced-syllabus-title {
+    font-size: 1rem; 
+    font-weight: 600;
+    flex: 1;
+    text-transform: capitalize;
+
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.reduced-syllabus-toggle-icon {
+    font-size: 1.3rem; 
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.reduced-syllabus-toggle-icon:hover {
+    transform: rotate(180deg);
+}
+
+.reduced-syllabus-content {
+    padding: 12px;
+    background-color: #333333;
+    color: #00bcd4; 
+    border-top: 2px solid #00bcd4;
+    border-radius: 0 0 10px 10px;
+}
+
+.reduced-syllabus-point {
+    margin: 8px 0;
+    font-size: 1rem; 
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    
+    font-family: "Unna", serif;
+    font-weight: 400;
+
+}
+
+.pyfs-img {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .pyfs-img:hover {
+    box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0.7);
+    transform: scale(1.1); 
+    cursor: pointer;
+  }
+  
+
+.reduced-syllabus-point:hover {
+    transform: translateX(8px);
+    color: #00bcd4;
+}
+
+.reduced-syllabus-point i {
+    color: #00bcd4;
+    margin-right: 10px;
+}
+
+.reduced-syllabus-download-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reduced-syllabus-download-heading {
+    font-size: 1.3rem; 
+    color: #00bcd4;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.reduced-syllabus-download-button {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 1rem; 
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reduced-syllabus-download-button:hover {
+    background-color: #673ab7; 
+    transform: scale(1.05);
+}
+
+.reduced-syllabus-download-button i {
+    margin-right: 6px;
+}
+
+
+@keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+  
+  .details-item i {
+    display: inline-block;
+    font-size: 2rem;
+    color: #6f42c1; 
+    animation: shake 1.2s infinite ease-in-out;
+  }
+  
+  .details-item:nth-child(1) i {
+    animation-delay: 0s;
+  }
+  .details-item:nth-child(2) i {
+    animation-delay: 0.4s;
+  }
+  .details-item:nth-child(3) i {
+    animation-delay: 0.8s;
+  }
+  .details-item:nth-child(4) i {
+    animation-delay: 1.2s;
+  }
+  
+
+
+  @keyframes slideLeftToRight {
+    0% {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .benefit-item i {
+    display: inline-block;
+    font-size: 2rem;
+    color:#e11d48; 
+    animation: slideLeftToRight 1.5s ease-in-out infinite;
+    cursor: pointer;
+  }
+  
+  .benefit-item:nth-child(1) i {
+    animation-delay: 0s;
+  }
+  .benefit-item:nth-child(2) i {
+    animation-delay: 0.4s;
+  }
+  .benefit-item:nth-child(3) i {
+    animation-delay: 0.8s;
+  }
+  .benefit-item:nth-child(4) i {
+    animation-delay: 1.2s;
+  }
+
+
+.details-label h5 {
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.benefit-label h5 {
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .career-icon i {
+    display: inline-block;
+    font-size: 3rem; 
+    color: #3498db; 
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
+  .career-item:nth-child(1) .career-icon i {
+    animation-delay: 0s;
+  }
+  .career-item:nth-child(2) .career-icon i {
+    animation-delay: 0.3s;
+  }
+  .career-item:nth-child(3) .career-icon i {
+    animation-delay: 0.6s;
+  }
+  

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PYFS.css';
+// import './pyfstack.css';
 import { FaPython, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase, FaGithub, FaUserTie, FaLaptopCode, FaServer, FaGlobeAmericas, FaTools, FaQuestionCircle } from 'react-icons/fa';
 import { SiDjango, SiMysql, SiFlask, SiBootstrap } from 'react-icons/si';
 import Footer from '../Footer/footer';
@@ -220,7 +221,7 @@ const skills = [
                     </div>
 
                     <div>
-                        <img  style={{width:"250px" , marginTop:"100px"}} src={placement} alt='logo' />
+                        <img className='pyfs-img'  style={{width:"450px",height:"40vh",borderRadius:"50px" , marginTop:"30px"}} src='https://user-images.githubusercontent.com/74038190/212749695-a6817c5a-a794-462b-afca-1b5ce7dd5e63.gif' alt='logo' />
 
                     </div>
                 </header>
@@ -237,10 +238,10 @@ const skills = [
                     <section data-aos="fade-up" id="skills" className="course-skills">
                         <h2 data-aos="fade-up" className="module-heading" style={{color:"#1d4ed8"}}>Skills You Will Learn</h2>
                         <div data-aos="fade-up" className="carousel-container">
-                            <div className="carousel-content" style={{ transform: `translateX(-${(currentIndex % (skills.length - 4)) * 100 / 5}%)` }}>
+                            <div data-aos="fade-up" className="carousel-content" style={{ transform: `translateX(-${(currentIndex % (skills.length - 4)) * 100 / 5}%)` }}>
                                 {skills.map((skill, index) => (
-                                    <div  style={{ color: skill.color }} className="skill" key={index}>
-                                        <div className="skill-icon">{skill.icon}</div>
+                                    <div data-aos="fade-up"  style={{ color: skill.color }} className="skill" key={index}>
+                                        <div data-aos="fade-up" className="skill-icon">{skill.icon}</div>
                                         <p>{skill.name}</p>
                                     </div>
                                 ))}
@@ -248,113 +249,201 @@ const skills = [
                         </div>
                     </section>
 
-                    <div  data-aos="fade-up" id='syllabus' className="syllabus-container">
-            <h2 className="section-heading" style={{color:"#1d4ed8"}}>Syllabus</h2>
-
-            <ul data-aos="fade-up" className="syllabus-list">
-    {syllabus.map((item, index) => (
-        <li key={index} className="syllabus-item">
-            <div data-aos="fade-up" className="syllabus-header" onClick={() => toggleContent(index)}>
-                <span className={`syllabus-icon ${item.iconClass}`}>{item.icon}</span>
-                <span style={{color:"black" , fontSize:"1.3rem"}} className="syllabus-title">{item.title}</span>
-                <span className="toggle-icon">
-                    <i className="fa-solid fa-arrow-right"></i>
-                </span>
-            </div>
-            {activeIndex === index && (
-                <ul style={{cursor:"pointer"}} className="syllabus-content">
-                    {item.content.map((point, i) => (
-                        <li
-                            key={i}
-                            style={{
-                                display: "flex",
-                                alignItems: "center",
-                                marginBottom: "5px",
-                                color: "black", 
-                                fontSize:"1.2rem",
-                                marginTop:"15pz",
-                            }}
-                        >
-                            &nbsp;
-                            <i
-                                className="fa-solid fa-circle-dot"
-                                style={{
-                                    color: activeIndex === index ? "#007BFF" : "#888", 
-                                    transition: "color 0.3s ease",
-                                }}
-                            ></i>
-                            &nbsp; {point}
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </li>
-    ))}
-</ul>
-
-<div data-aos="fade-up" className="data-science-download-section">
-        <h3 className="data-science-download-heading">Download Syllabus </h3>
-        <a href="/path/to/your/pdf-file.pdf" download className="data-science-download-button">
+                    <div data-aos="fade-up" id="syllabus" className="reduced-syllabus-container">
+    <h2 className="reduced-syllabus-heading">Syllabus</h2>
+    <ul className="reduced-syllabus-list">
+        {syllabus.map((item, index) => (
+            <li key={index} className="reduced-syllabus-item">
+                <div data-aos="fade-up" className="reduced-syllabus-header" onClick={() => toggleContent(index)}>
+                    <span data-aos="fade-up" className={`reduced-syllabus-icon ${item.iconClass}`}>{item.icon}</span>
+                    <span data-aos="fade-up" className="reduced-syllabus-title">{item.title}</span>
+                    <span data-aos="fade-up" className="reduced-syllabus-toggle-icon">
+                        <i className="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+                {activeIndex === index && (
+                    <ul className="reduced-syllabus-content">
+                        {item.content.map((point, i) => (
+                            <li  style={{cursor:"pointer"}} key={i} className="reduced-syllabus-point">
+                                <i className="fa-solid fa-circle-dot"></i>
+                                {point}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </li>
+        ))}
+    </ul>
+    <div data-aos="fade-up" className="reduced-syllabus-download-section">
+        <h3 className="reduced-syllabus-download-heading">Download Syllabus</h3>
+        <a href="/path/to/your/pdf-file.pdf" download className="reduced-syllabus-download-button">
             <i className="fa-solid fa-download"></i> Download
         </a>
     </div>
+</div>
 
-
-
-
-            
-        </div>
 
                     <h2 id="modules" style={{color:"#1d4ed8"}} className="module-heading">Modules & Tools</h2>
-                    <section data-aos="fade-up" className="course-modules">
-                        <div data-aos="fade-up" className="module">
-                            <h3><FaPython /> Python Programming</h3>
-                            <p>Learn Python, the most versatile and beginner-friendly programming language, to write efficient and maintainable code.</p>
-                        </div>
-                        <div data-aos="fade-up" className="module">
-                            <h3><SiDjango /> Django Framework</h3>
-                            <p>Master Django to develop robust backend systems with clean architecture and built-in security features.</p>
-                        </div>
-                        <div data-aos="fade-up" className="module">
-                            <h3><SiFlask /> Flask Framework</h3>
-                            <p>Understand Flask for lightweight and fast application development with flexibility for extensions.</p>
-                        </div>
-                        <div data-aos="fade-up" className="module">
-                            <h3><FaHtml5 /> HTML5 & <FaCss3Alt /> CSS3</h3>
-                            <p>Design responsive and accessible websites using HTML5 for structure and CSS3 for styling.</p>
-                        </div>
-                        <div data-aos="fade-up" className="module">
-                            <h3><FaJsSquare /> JavaScript</h3>
-                            <p>Enhance user interactivity with advanced JavaScript techniques, including ES6 features.</p>
-                        </div>
-                        <div data-aos="fade-up" className="module">
-                            <h3><FaReact /> ReactJS</h3>
-                            <p>Build dynamic, single-page applications with ReactJS, leveraging component-based architecture and hooks.</p>
-                        </div>
-                        <div  data-aos="fade-up" className="module">
-                            <h3><FaDatabase /> Database (MySQL)</h3>
-                            <p>Learn to design and manage relational databases using MySQL for efficient data storage and retrieval.</p>
-                        </div>
-                        <div data-aos="fade-up" className="module">
-                            <h3><SiBootstrap /> Bootstrap</h3>
-                            <p>Create mobile-first, responsive designs effortlessly with Bootstrap’s utility classes and components.</p>
-                        </div>
-                        <div data-aos="fade-up" className="module">
-                            <h3><FaGithub /> GitHub</h3>
-                            <p>Master version control and collaborate on projects using Git and GitHub repositories.</p>
-                        </div>
-                    </section>
+<section data-aos="fade-up" className="course-modules" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "20px", padding: "20px", justifyItems: "center" }}>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#1d4ed8", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <FaPython style={{ marginRight: "10px", color: "#f97316" }} />
+            Python Programming
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Learn Python, the most versatile and beginner-friendly programming language, to write efficient and maintainable code.
+        </p>
+    </div>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#16a34a", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <SiDjango style={{ marginRight: "10px", color: "#fff" }} />
+            Django Framework
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Master Django to develop robust backend systems with clean architecture and built-in security features.
+        </p>
+    </div>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#e11d48", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <SiFlask style={{ marginRight: "10px", color: "#86efac" }} />
+            Flask Framework
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Understand Flask for lightweight and fast application development with flexibility for extensions.
+        </p>
+    </div>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#f59e0b", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <FaHtml5 style={{ marginRight: "10px", color: "#ea580c" }} />
+            HTML5 & <FaCss3Alt style={{ marginLeft: "10px", color: "#22d3ee" }} /> CSS3
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Design responsive and accessible websites using HTML5 for structure and CSS3 for styling.
+        </p>
+    </div>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#f97316", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <FaJsSquare style={{ marginRight: "10px", color: "#fde047" }} />
+            JavaScript
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Enhance user interactivity with advanced JavaScript techniques, including ES6 features.
+        </p>
+    </div>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#3b82f6", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <FaReact style={{ marginRight: "10px", color: "#22d3ee" }} />
+            ReactJS
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Build dynamic, single-page applications with ReactJS, leveraging component-based architecture and hooks.
+        </p>
+    </div>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#8b5cf6", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <FaDatabase style={{ marginRight: "10px", color: "#fff" }} />
+            Database (MySQL)
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Learn to design and manage relational databases using MySQL for efficient data storage and retrieval.
+        </p>
+    </div>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#0ea5e9", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <SiBootstrap style={{ marginRight: "10px", color: "#7c3aed" }} />
+            Bootstrap
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Create mobile-first, responsive designs effortlessly with Bootstrap’s utility classes and components.
+        </p>
+    </div>
+    <div data-aos="fade-up" className="module" style={{
+        backgroundColor: "#6b7280", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", textAlign: "center", 
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        ':hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+        }
+    }}>
+        <h3 data-aos="fade-up" style={{ color: "#fff", fontSize: "1.5rem", marginBottom: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <FaGithub style={{ marginRight: "10px", color: "#fff" }} />
+            GitHub
+        </h3>
+        <p data-aos="fade-up" style={{ color: "#f3f4f6", fontSize: "1rem", lineHeight: "1.5" }}>
+            Master version control and collaborate on projects using Git and GitHub repositories.
+        </p>
+    </div>
+</section>
+
+
+
 
                     <section id="career" data-aos="fade-up" className="career-opportunities">
                         <h2 style={{color:"#1d4ed8"}} className="section-title">Career Opportunities</h2>
                         <div className="career-container">
                             <div data-aos="fade-up" className="career-item">
                                 <div  className="career-icon">
-                                    <i className="fas fa-laptop-code"></i>
+                                    <i className="fas fa-laptop-code"></i> 
                                 </div>
-                                <div data-aos="fade-up" className="career-info">
-                                    <h3>Frontend Developer</h3>
-                                    <p>Join our dynamic team to create modern, user-friendly interfaces using cutting-edge technologies.</p>
+                                <div data-aos="fade-up" className="career-info"> 
+                                    <h3>  Frontend Developer</h3>
+                                    <p> &nbsp; Join our dynamic team to create modern, user-friendly interfaces using cutting-edge technologies.</p>
                                 </div>
                             </div>
                             <div data-aos="fade-up" className="career-item">
@@ -363,7 +452,7 @@ const skills = [
                                 </div>
                                 <div data-aos="fade-up" className="career-info">
                                     <h3>Backend Developer</h3>
-                                    <p>Build robust server-side, optimize performance, and work with databases.</p>
+                                    <p> &nbsp; Build robust server-side, optimize performance, and work with databases.</p>
                                 </div>
                             </div>
                             <div data-aos="fade-up" className="career-item">
@@ -372,14 +461,14 @@ const skills = [
                                 </div>
                                 <div data-aos="fade-up" className="career-info">
                                     <h3>Full Stack Developer</h3>
-                                    <p>Analyze trends, create modern, optimize performance, Works both server and client sides.</p>
+                                    <p> &nbsp;Analyze trends, create modern, optimize performance, Works both server and client sides.</p>
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     <section data-aos="fade-up" className="course-benefits">
-                        <h2 style={{color:"#1d4ed8"}} data-aos="fade-up">Why Choose This Course?</h2>
+                        <h2 style={{color:"#1d4ed8"}} data-aos="fade-up">Why Choose This Training?</h2>
                         <ul data-aos="fade-up">
                             <li className='lll'>Comprehensive curriculum covering frontend and backend development.</li>
                             <li className='lll'>Hands-on projects to build a robust portfolio.</li>
@@ -396,8 +485,8 @@ const skills = [
                                 <FaQuestionCircle />
                             </div>
                             <div data-aos="fade-up">
-                                <h3 className='ppp'>Who is this course for?</h3>
-                                <p>This course is ideal for aspiring developers, IT professionals, or anyone looking to start or advance their career in web development.</p>
+                                <h3 className='ppp'>Who is this training for?</h3>
+                                <p>This training is ideal for aspiring developers, IT professionals, or anyone looking to start or advance their career in web development.</p>
                             </div>
                         </div>
                         <div data-aos="fade-up" className="faq-item">
@@ -413,55 +502,57 @@ const skills = [
 
                     <div data-aos="fade-up" className="course-info-wrapper">
                         <section data-aos="fade-up" className="course-details">
-                            <h2 style={{color:"#1d4ed8"}} className="section-title">Course Details</h2>
-                            <div className="details-wrapper">
-                                <div className="details-item">
-                                    <i className="fas fa-calendar-alt"></i>
-                                    <strong className="details-label">Duration:</strong>
-                                    <p className="details-text">6 months (Full-Time / Part-time)</p>
-                                </div>
-                                <div className="details-item">
-                                    <i className="fas fa-laptop"></i>
-                                    <strong className="details-label">Mode:</strong>
-                                    <p className="details-text">Online/Offline</p>
-                                </div>
-                                <div className="details-item">
-                                    <i className="fas fa-certificate"></i>
-                                    <strong className="details-label">Certification:</strong>
-                                    <p className="details-text">Industry-recognized certificate</p>
-                                </div>
-                                <div className="details-item">
-                                    <i className="fas fa-project-diagram"></i>
-                                    <strong className="details-label">Capstone Projects:</strong>
-                                    <p className="details-text">Build real-world projects</p>
-                                </div>
-                            </div>
+                            <h2 style={{color:"#1d4ed8"}} className="section-title">Training Details</h2>
+                            <div data-aos="fade-up" className="details-wrapper">
+  <div data-aos="fade-up" className="details-item">
+    <i className="fas fa-calendar-alt"></i>
+    <strong className="details-label"><h5>Duration:</h5></strong>
+    <p style={{fontSize:"1.5rem"}} className="details-text">6 months (Full-Time / Part-time)</p>
+  </div>
+  <div data-aos="fade-up" className="details-item">
+    <i className="fas fa-laptop"></i>
+    <strong className="details-label"><h5>Mode:</h5></strong>
+    <p   style={{fontSize:"1.5rem"}} className="details-text">Online/Offline</p>
+  </div>
+  <div data-aos="fade-up" className="details-item">
+    <i className="fas fa-certificate"></i>
+    <strong className="details-label"><h5>Certification:</h5></strong>
+    <p  style={{fontSize:"1.5rem"}} className="details-text">Industry-recognized certificate</p>
+  </div>
+  <div data-aos="fade-up" className="details-item">
+    <i className="fas fa-project-diagram"></i>
+    <strong className="details-label"><h5>Capstone Projects:</h5></strong>
+    <p  style={{fontSize:"1.5rem"}} className="details-text">Build real-world projects</p>
+  </div>
+</div>
+
                         </section>
 
                         <section data-aos="fade-up" className="course-benefits">
-                            <h2 style={{color:"#1d4ed8"}} className="section-title">Course Benefits</h2>
-                            <div className="benefits-wrapper">
-                                <div data-aos="fade-up" className="benefit-item">
-                                    <i className="fas fa-trophy"></i>
-                                    <strong className="benefit-label">Expert Trainers</strong>
-                                    <p className="benefit-text">Learn from industry experts with years of experience.</p>
-                                </div>
-                                <div data-aos="fade-up" className="benefit-item">
-                                    <i className="fas fa-users"></i>
-                                    <strong className="benefit-label">Peer Learning</strong>
-                                    <p className="benefit-text">Collaborate and grow with a supportive peer community.</p>
-                                </div>
-                                <div data-aos="fade-up" className="benefit-item">
-                                    <i className="fas fa-briefcase"></i>
-                                    <strong className="benefit-label">Job Assistance</strong>
-                                    <p className="benefit-text">Access job placement support upon course completion.</p>
-                                </div>
-                                <div data-aos="fade-up" className="benefit-item">
-                                    <i className="fas fa-book-open"></i>
-                                    <strong className="benefit-label">Comprehensive Resources</strong>
-                                    <p className="benefit-text">Access to a wide range of learning materials and tools.</p>
-                                </div>
-                            </div>
+                            <h2 style={{color:"#1d4ed8"}} className="section-title">Training Benefits</h2>
+                            <div data-aos="fade-up" className="benefits-wrapper">
+  <div data-aos="fade-up" className="benefit-item">
+    <i className="fas fa-trophy"></i>
+    <strong className="benefit-label"><h5>Expert Trainers</h5></strong>
+    <p  style={{fontSize:"1.2rem"}} className="benefit-text">Learn from industry experts with years of experience.</p>
+  </div>
+  <div data-aos="fade-up" className="benefit-item">
+    <i className="fas fa-users"></i>
+    <strong className="benefit-label"><h5>Peer Learning</h5></strong>
+    <p style={{fontSize:"1.2rem"}} className="benefit-text">Collaborate and grow with a supportive peer community.</p>
+  </div>
+  <div data-aos="fade-up" className="benefit-item">
+    <i className="fas fa-briefcase"></i>
+    <strong className="benefit-label"><h5>Job Assistance</h5></strong>
+    <p style={{fontSize:"1.2rem"}} className="benefit-text">Access job placement support upon course completion.</p>
+  </div>
+  <div data-aos="fade-up" className="benefit-item">
+    <i className="fas fa-book-open"></i>
+    <strong className="benefit-label"><h5>Comprehensive Resources</h5></strong>
+    <p style={{fontSize:"1.2rem"}} className="benefit-text">Access to a wide range of learning materials and tools.</p>
+  </div>
+</div>
+
                         </section>
                     </div>
                 </div>

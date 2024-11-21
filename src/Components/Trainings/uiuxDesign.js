@@ -94,13 +94,13 @@ const UiuxDesign = () => {
 >
     <div>
         <h1 style={{ fontSize: "1.9rem" }}>
-            <i className="fas fa-book"></i> UI/UX Design Course
+            <i className="fas fa-book"></i> UI/UX Design Training
         </h1>
         <p>
             <i className="fas fa-paint-brush"></i> Master the art of crafting beautiful and user-friendly interfaces!
         </p>
     </div>
-    <img 
+    {/* <img 
         src="https://camo.githubusercontent.com/66066b22abacaf358032bb15ab64fe18654e8d00e2ed4d07747d89eccb6596ae/68747470733a2f2f63646e622e61727473746174696f6e2e636f6d2f702f6173736574732f696d616765732f696d616765732f3032382f3939312f3939392f6f726967696e616c2f616e6e612d68617672796c79756b682d2e6769663f31353936313235313132" 
         alt="UI/UX Design" 
         style={{ 
@@ -109,8 +109,16 @@ const UiuxDesign = () => {
             borderRadius: "10px", 
             objectFit: "cover" 
         }} 
-    />
+    /> */}
+
+<div data-aos="fade-down">
+                        <img className='pyfs-img'  style={{width:"450px",height:"40vh",borderRadius:"50px" , marginTop:"30px"}} src='https://user-images.githubusercontent.com/74038190/212750672-2f3f2b50-c84f-4ed8-a60a-849ae69ff9df.gif' alt='logo' />
+
+                    </div>
+
 </div>
+
+
 
 
 
@@ -475,7 +483,7 @@ const UiuxDesign = () => {
             </div>
         </div>
             <div data-aos="fade-up" id='faq' className="uiux-section uiux-why">
-                <h1 style={{fontSize:"2rem" , paddingTop:"20px" , paddingBottom:"20px" ,}} >    <i className="fas fa-lightbulb"></i> Why Choose This Course</h1>
+                <h1 style={{fontSize:"2rem" , paddingTop:"20px" , paddingBottom:"20px" ,}} >    <i className="fas fa-lightbulb"></i> Why Choose This Training</h1>
                 <p className='ppppp' data-aos="fade-up" > <i class="fa-solid fa-user-shield"></i> We offer industry-relevant training with real-world projects!</p>
             </div>
             <div data-aos="fade-up" style={{ display: "flex", justifyContent: "space-between", gap: "20px", padding: "20px" }}>
@@ -501,7 +509,7 @@ const UiuxDesign = () => {
     </div>
 
     <div className="uiux-section uiux-benefits" style={{ flex: "1", backgroundColor: "#f4f4f4", borderRadius: "10px", padding: "20px", boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)" }}>
-        <h1 style={{ fontSize: "2rem", paddingTop: "20px", paddingBottom: "20px" }}>   <i className="fas fa-trophy"></i>Course Benefits</h1>
+        <h1 style={{ fontSize: "2rem", paddingTop: "20px", paddingBottom: "20px" }}>   <i className="fas fa-trophy"></i>Training Benefits</h1>
         <ul className='ppppp'>
         <li data-aos="fade-up">🚀 Hands-on projects</li>
     <li data-aos="fade-up">🚀 Learn from industry experts</li>

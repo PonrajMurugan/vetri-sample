@@ -170,3 +170,21 @@
 }
 
 
+
+
+.md-h{
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-size: 1rem; */
+    letter-spacing: 1.5px;
+
+}
+
+.md-p{
+
+    font-family: "Unna", serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+
+}

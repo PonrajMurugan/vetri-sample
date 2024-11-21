@@ -188,19 +188,12 @@
 .DaN-benefits-list li {
     font-size: 20px;
     padding-left: 30px;
-    position: relative;
+    /* position: relative; */
     margin-bottom: 15px;
     color: #f1f1f1;
 }
 
-.DaN-benefits-list li::before {
-    content: '\2022';
-    position: absolute;
-    left: 0;
-    font-size: 30px;
-    color: #ff5c8d;
-    top: 2px;
-}
+
 
 .DaN-footer {
     text-align: center;
@@ -297,3 +290,81 @@
     padding-left: 15px;
     line-height: 1.6;
 }
+
+
+.dan-pon{
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1.5px;
+}
+
+.dan-raj{
+
+    font-family: "Unna", serif;
+    font-weight: 400;
+
+}
+
+
+
+
+.DaN-faq {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .DaN-section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .DaN-faq-description {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .DaN-faq-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .DaN-faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .DaN-faq-item:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .DaN-faq-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .DaN-faq-item:hover h3 {
+    color: #007bff; 
+  }
+  
+  .DaN-faq-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+ 
+  }
