@@ -83,7 +83,11 @@ const Navbar = () => {
                       <li><Link to="/training-details/4" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Java Full Stack</Link></li>
                       <li><Link to="/training-details/5" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Mobile App Development</Link></li>
                       <li><Link to="/training-details/9" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Data Analytics</Link></li>
+                     
                       <li><Link to="/training-details/8" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; Data Science</Link></li>
+                   
+                      <li><Link to="/training-details/1" className="dropdown-item" onClick={handleLogoClick}> <i class="fa-solid fa-right-to-bracket"></i> &nbsp; MERN Stack Development</Link></li>
+
                     </ol>
                   </div>
                   

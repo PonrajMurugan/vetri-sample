@@ -38,6 +38,7 @@ import MobileAppDevel from './Components/Trainings/MobileAppDevel';
 import DataAnalyticsNew from './Components/Trainings/DataAnalyticsNew';
 import DataScienceNew from './Components/Trainings/DataScienceNew';
 import UiuxDesign from './Components/Trainings/uiuxDesign';
+import MernStackNew from './Components/Trainings/mernStackNew';
 
 function App() {
   return (
@@ -91,6 +92,8 @@ function App() {
           <Route path='/training-details/8' element={<DataScienceNew/>} />
 
           <Route path="/training-details/11" element={<UiuxDesign />} />
+
+          <Route path="/training-details/1" element={<MernStackNew />} />
 
 
           <Route path="/internship" element={<Internship />} />
