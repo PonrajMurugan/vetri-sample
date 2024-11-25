@@ -61,7 +61,7 @@ const Navbar = () => {
 
           <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a href="#raj" className="nav-link"> <i class="fa-solid fa-earth-americas"></i>&nbsp;VTS PROCESS
+            <a href="vts-process" className="nav-link"> <i class="fa-solid fa-earth-americas"></i>&nbsp;VTS PROCESS
             </a>
           </li>
 

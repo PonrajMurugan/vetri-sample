@@ -39,6 +39,7 @@ import DataAnalyticsNew from './Components/Trainings/DataAnalyticsNew';
 import DataScienceNew from './Components/Trainings/DataScienceNew';
 import UiuxDesign from './Components/Trainings/uiuxDesign';
 import MernStackNew from './Components/Trainings/mernStackNew';
+import VtsProcess from './Components/Trainings/Vts_Process';
 
 function App() {
   return (
@@ -100,6 +101,9 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/placement" element={<Placements />} />
           <Route path="/VISplace" element={<VisPlacement />} /> 
+
+
+          <Route path='/vts-process' element={<VtsProcess/>} />
 
         </Routes>
 
